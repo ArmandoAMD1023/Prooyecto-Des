@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/1FONDO\ ABRAHAM_Mesa\ de\ trabajo\ 1.png'); /* Reemplaza 'ruta/tu-imagen-de-fondo.jpg' con la ruta correcta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+h1 {
+    color: white;
+    font-family: 'Palatino', sans-serif; /* Cambia 'Roboto' a la fuente que desees usar */
+}
+img[src*="boton.png"] {
+    width: 120px; /* Ajusta el ancho según tus necesidades */
+    position: relative;
+    
+}
+
+img[src*="sep.png"] {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    position: relative;
+    left: 390px; /* Ajusta la posición izquierda en píxeles */
+    top: 300px; /* Ajusta la posición superior en píxeles */
+}
+
+img[src*="tcis.png"] {
+    width: 450px; /* Ajusta el ancho según tus necesidades */
+    position: relative;
+    left: 10%; /* Coloca el centro de la imagen en el centro horizontal */
+    top: -100px; /* Ajusta la posición superior en píxeles */
+    margin-left: -5px; /* Mueve la imagen hacia la izquierda la mitad de su ancho para centrarla */
+}
+
+img[src*="itl_leon.png"] {
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+    position: relative;
+    right: -150px; /* Ajusta la posición derecha en píxeles */
+    top: -270px; /* Ajusta la posición superior en píxeles */
+}
+
+   
