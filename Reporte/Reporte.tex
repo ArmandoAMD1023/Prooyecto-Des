@@ -1,6 +1,58 @@
 \documentclass[spanish,10pt,letterpaper]{report}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
+
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
+
+
+
+
+\setmainfont{Arial}
+\geometry{
+	letterpaper,
+	top=25mm,
+	bottom=25mm,
+	left=30mm,
+	right=30mm
+}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\hyphenpenalty=10000
+\tolerance=9999
+%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex}
+
+\titleformat{\chapter}[block]
+{\bfseries\centering\fontsize{14pt}{2em}\fontspec{Arial}\selectfont}{
+	\MakeUppercase{\chaptertitlename} \thechapter\\
+}{0mm}{\MakeUppercase{#1}}
+
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+%\addto\captionsspanish{\renewcommand{\contentsname}{ÍNDICE
+%		\addcontentsline{toc}{chapter}{ÍNDICE}}}
+
+\titlespacing*{\chapter}{0mm}{0mm}{10mm}
+
+
+
+
+
 \begin{document}
+	\input{Portada}
+	\fontsize{12pt}{2em}\selectfont
 	
+	\tableofcontents
+	\input{Desarrollo de la Arquitectura de la Información}
+	\input{Requerimientos del Proyecto}
+	\input{Desarrollo de Diagramas UML}
+	\input{DiagramasBD}
 \end{document}
