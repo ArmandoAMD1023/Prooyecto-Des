@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O/GAftZLMWYYgoOseyNa8m2fJ87o36bYtro1HFuxqbjRUQQB6+yYilj/75UsagaKpaeH6pfuKxM9ZeNj57ezWw==",
+  "dgSpecHash": "78PnWGYe03o+8msOgbNEBffedkdC30tMFDa1RnMKFZBcf8lgpxsmu973bGkF85mRcnWGkwnvdTqlCzEzu4UyGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\osval\\Desktop\\ProyectoFinalMC\\ProyectoConferencias\\AccesoADatos\\AccesoADatos.csproj",
+  "projectFilePath": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\AccesoADatos\\AccesoADatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\osval\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\osval\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

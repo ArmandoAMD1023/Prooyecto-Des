@@ -1,5 +1,6 @@
 ﻿using AccesoADatos.Context;
 using AccesoADatos.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,15 @@ namespace AccesoADatos.Operaciones
         {
             return contexto.Asistencia.ToList();
         }
+
+        public List<Asistencium> SeleccionarTodasConDetalles()
+        {
+            return contexto.Asistencia
+                .Include(a => a.IdConferenciaNavigation) // Incluye la información de la conferencia
+                .Include(a => a.IdParticipanteNavigation) // Incluye la información del participante
+                .ToList();
+        }
+
 
         // Método para seleccionar una asistencia en específico por id
         public Asistencium Seleccionar(int id)

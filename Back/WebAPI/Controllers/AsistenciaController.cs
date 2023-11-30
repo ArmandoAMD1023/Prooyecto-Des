@@ -3,6 +3,8 @@ using AccesoADatos.Models;
 using AccesoADatos.Operaciones;
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace WebApi.Controllers
 {
@@ -16,6 +18,29 @@ namespace WebApi.Controllers
         public List<Asistencium> ObtenerTodasLasAsistencias()
         {
             return asistenciaDAO.SeleccionarTodas();
+        }
+
+        [HttpGet("asistenciasDetalladas")]
+        public ActionResult<IEnumerable<Asistencium>> ObtenerTodasLasAsistenciasConDetalles()
+        {
+            try
+            {
+                var asistencias = asistenciaDAO.SeleccionarTodasConDetalles();
+
+                var jsonOptions = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    // ... otras opciones según sea necesario
+                };
+
+                var jsonResult = JsonSerializer.Serialize(asistencias, jsonOptions);
+
+                return Content(jsonResult, "application/json");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpGet("asistencia/{id}")]

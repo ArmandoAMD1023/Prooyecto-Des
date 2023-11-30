@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dfHfwuDEpK04sQXGIQeqA48Vl9Vbbh192FM8AXsZHPP5ia80kebJ5uBH0S4PAwrFt/fGo01LBcmY0EA8VeG9Ag==",
+  "dgSpecHash": "VpdFUW35QJjZ9nXQjtfOdunJpgyO6Enc2zsbOCX0x41/osmRmxiI1nYfNsXpip+P7DLEy3+VZUoJKMxURSSWyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\osval\\Desktop\\ProyectoFinalMC\\ProyectoConferencias\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\osval\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\osval\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
