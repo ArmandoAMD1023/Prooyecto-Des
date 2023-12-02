@@ -31,23 +31,26 @@
         <label for="twitter">Twitter:</label>
         <input type="text" id="twitter" name="twitter">
 
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" name="ocupacion" required>
+
         <label>Imagen de perfil:</label>
         <div class="image-options">
             <div class="image-option">
                 <label for="opcion1"><img src="usuario1.png" alt="Opción 1"></label>
-                <input type="radio" id="opcion1" name="imagen" value="opcion1.jpg">
+                <input type="radio" id="opcion1" name="imagen" value="1">
                 <p>Autor 1</p>
             </div>
 
             <div class="image-option">
-                <label for="opcion2"><img src="usuario1.png" alt="Opción 2"></label>
-                <input type="radio" id="opcion2" name="imagen" value="opcion2.jpg">
+                <label for="opcion2"><img src="usuario2.png" alt="Opción 2"></label>
+                <input type="radio" id="opcion2" name="imagen" value="2">
                 <p>Autor 2</p>
             </div>
 
             <div class="image-option">
-                <label for="opcion3"><img src="usuario1.png" alt="Opción 3"></label>
-                <input type="radio" id="opcion3" name="imagen" value="opcion3.jpg">
+                <label for="opcion3"><img src="usuario3.png" alt="Opción 3"></label>
+                <input type="radio" id="opcion3" name="imagen" value="3">
                 <a>Autor 3</a>
             </div>
         </div>
@@ -58,6 +61,56 @@
 
         <button type="submit">Registrar</button>
     </form>
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe de la manera estándar
+
+        // Recoge los valores del formulario
+        const nombre = document.getElementById('nombre').value;
+        const apellidos = document.getElementById('apellido').value;
+        const email = document.getElementById('email').value;
+        const usuarioTwitter = document.getElementById('twitter').value;
+        const avatar = obtenerValorSeleccionado('imagen');
+        const ocupacion = document.getElementById('ocupacion').value;
+        const aceptoTerminos = document.getElementById('terminos').checked;
+
+        // Construye el objeto con los datos del formulario
+        const datos = {
+            nombre,
+            apellidos,
+            email,
+            usuarioTwitter,
+            avatar,
+            ocupacion,
+            aceptoTerminos,
+            asistencia: []
+        };
+
+        // Realiza la solicitud POST
+        fetch('http://localhost:5034/api/participante', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datos)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Maneja la respuesta del servidor si es necesario
+            console.log('Respuesta del servidor:', data);
+        })
+        .catch(error => {
+            console.error('Error al realizar la solicitud POST:', error);
+        });
+    });
+
+    // Función auxiliar para obtener el valor seleccionado de un grupo de radio buttons
+    function obtenerValorSeleccionado(nombre) {
+        const opciones = document.getElementsByName(nombre);
+        const opcionSeleccionada = Array.from(opciones).find(opcion => opcion.checked);
+        return opcionSeleccionada ? opcionSeleccionada.value : null;
+    }
+    </script>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 CREATE DATABASE Conferencias;
 
 -- Usar la base de datos
-USE ConferenciasBD;
+USE Conferencias;
 
 -- Crear la tabla Participantes
 CREATE TABLE Participantes (
@@ -34,3 +34,8 @@ CREATE TABLE Asistencia (
     FOREIGN KEY (ID_Participante) REFERENCES Participantes(ID_Participante),
     FOREIGN KEY (ID_Conferencia) REFERENCES Conferencias(ID_Conferencia)
 );
+
+
+select * from Participantes
+
+delete from Participantes where ID_Participante > 2
