@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/Inicio.css">
+    <title>Aplicacion Registro de Asistentes de Congreso</title>
+</head>
+<h1>Congreso de Tecnologías de la Información</h1>
+<div class="menu">
+    <a href="../htmls/index.html">Inicio</a>
+    <a href="../htmls/Participantes.html">Participantes</a>
+    <a href="../htmls/Registro.html">Registros</a>
+    <a href="../htmls/Conferencias.html">Conferencia</a>
+</div>
+<div class="user-container" id="userContainer">
+   
+    <!-- Aquí se cargarán las tarjetas de usuario -->
+</div>
+
+<script>
+    // Supongamos que tienes un array de usuarios con sus datos
+    const users = [
+        { nombre: 'Usuario 1', imagen: 'usuario1.png'},
+        { nombre: 'Usuario 2', imagen: 'usuario1.png' },
+        // Agrega más usuarios según sea necesario
+    ];
+
+    // Función para crear tarjetas de usuario y agregarlas al contenedor
+    function renderUserCards() {
+        const userContainer = document.getElementById('userContainer');
+
+        users.forEach(user => {
+            const card = document.createElement('div');
+            card.classList.add('user-card');
+
+            const image = document.createElement('img');
+            image.src = user.imagen;
+            image.alt = 'Imagen de usuario';
+            image.classList.add('user-image');
+
+            const userInfo = document.createElement('div');
+            userInfo.classList.add('user-info');
+            userInfo.innerHTML = `
+                <h3>${user.nombre}</h3>
+            `;
+
+            card.appendChild(image);
+            card.appendChild(userInfo);
+
+            userContainer.appendChild(card);
+        });
+    }
+
+    // Llama a la función para renderizar las tarjetas al cargar la página
+    window.onload = renderUserCards;
+</script>
+
+</html>

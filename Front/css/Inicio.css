@@ -96,10 +96,10 @@ h1 {
     text-decoration: none;
     margin-top: 5px; /* Espaciado entre el email y el enlace de Twitter */
 }
-form {
+/*form {
     max-width: 400px;
     margin: 20px auto;
-}
+}*/
 
 label {
     display: block;
@@ -143,3 +143,120 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#registroForm {
+    background-color: white; /* Fondo blanco */
+    border-radius: 4px;
+    padding: 20px; /* Añadir relleno para un mejor espacio interno */
+}
+
+#registroForm label {
+    display: block;
+    color: black;
+    margin-bottom: 8px; /* Espacio entre etiquetas y campos de entrada */
+}
+
+#registroForm input,
+#registroForm button {
+    width: 100%; /* Asegurar que los campos de entrada y el botón ocupen el ancho completo */
+    margin-bottom: 16px; /* Espacio entre campos de entrada y el botón */
+}
+
+.image-options {
+    display: flex;
+    gap: 10px; /* Espacio entre las opciones de imagen */
+}
+
+.image-option {
+    flex: 1; /* Distribuir espacio de manera uniforme entre las opciones de imagen */
+}
+
+#registroForm button {
+    background-color: #0c23ef; /* Color de fondo del botón (puedes cambiarlo según tus preferencias) */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.image-option label {
+    color: black; /* Color de texto para los autores, ajusta según tus preferencias */
+    margin-top: 5px; /* Espacio entre la imagen y el texto del autor */
+    text-align: center; /* Centra el texto del autor */
+}
+
+
+/*--------------------------------------------------*/
+/* Estilo para la tabla */
+table {
+    width: 80%;
+    margin: 20px auto; /* Centra horizontalmente y agrega espacio en la parte superior */
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    padding: 12px;
+    border: 1px solid #ddd; /* Borde ligero */
+}
+
+/* Estilo para las celdas de datos */
+td {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto gris oscuro */
+    padding: 12px;
+    border: 1px solid #ddd; /* Borde ligero */
+}
+
+/* Estilo para los enlaces en las celdas de datos */
+td a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Estilo para los enlaces al pasar el ratón por encima */
+td a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------*/
+ /* Estilos para el modal */
+ .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+

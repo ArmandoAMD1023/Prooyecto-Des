@@ -4,17 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/Inicio.css">
+
     <title>Aplicacion Registro de Asistentes de Congreso</title>
 </head>
 <body>
     <h1>Congreso de Tecnologías de la Información</h1>
     <div class="menu">
-        <a href="../htmls/Inicio.html">Inicio</a>
+        <a href="../htmls/index.html">Inicio</a>
         <a href="../htmls/Participantes.html">Participantes</a>
-        <a href="../htmls/Conferencias.html">Conferencia</a>
         <a href="../htmls/Registro.html">Registros</a>
+        <a href="../htmls/Conferencias.html">Conferencia</a>
     </div>
 
-    
+    <!-- Agrega tu tabla de conferencias -->
+    <table>
+        <thead>
+            <tr>
+                <th>Horario</th>
+                <th>Título de la conferencia</th>
+                <th>Nombre del conferencista</th>
+                <th>Registro de asistencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Horario 1</td>
+                <td>Conferencia 1</td>
+                <td>Conferencista 1</td>
+                <td><a href="#" onclick="mostrarModal('Conferencia 1')">Registrar</a></td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+
+    <!-- Modal para el registro de asistencia -->
+    <div id="modalRegistro" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2 id="conferenciaSeleccionada">Conferencia Seleccionada</h2>
+            <form>
+                <label for="participantes">Participantes:</label>
+                <select id="participantes" name="participantes">
+                    <!-- Aquí deberías cargar dinámicamente la lista de participantes -->
+                    <option value="participante1">Participante 1</option>
+                    <option value="participante2">Participante 2</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+
+                <label>
+                    <input type="checkbox" id="confirmacionSi" name="confirmacion" value="si">
+                    Confirmar Asistencia (Sí)
+                </label>
+            
+                <label>
+                    <input type="checkbox" id="confirmacionNo" name="confirmacion" value="no">
+                    Confirmar Asistencia (No)
+                </label>
+
+                <button type="button" onclick="guardarRegistro()">Guardar Registro</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Agrega el siguiente bloque de script al final del body -->
+    <script>
+        function mostrarModal(conferencia) {
+            document.getElementById('conferenciaSeleccionada').innerText = conferencia;
+            document.getElementById('modalRegistro').style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalRegistro').style.display = 'none';
+        }
+
+        // ... Código existente ...
+
+    function guardarRegistro() {
+        // ... Código existente ...
+
+        if (confirmacionSi) {
+            // Código para cuando se confirma asistencia (Sí)
+            console.log('Asistencia confirmada (Sí)');
+            alert('Asistencia confirmada (Sí)');
+            // Redirige a la página de listado de participantes
+            window.location.href = '../htmls/ListadoParticipantes.html';
+        } else if (confirmacionNo) {
+            // Código para cuando no se confirma asistencia (No)
+            console.log('Asistencia confirmada (No)');
+            alert('Asistencia confirmada (No)');
+            cerrarModal(); // Cierra el modal después de guardar
+        } else {
+            // Ninguna opción seleccionada
+            alert('Selecciona una opción de confirmación');
+        }
+
+        
+
+        
+    }
+        
+
+    </script>
 </body>
 </html>
+

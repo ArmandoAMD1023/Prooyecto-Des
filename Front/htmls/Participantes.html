@@ -6,15 +6,64 @@
     <link rel="stylesheet" type="text/css" href="../css/Inicio.css">
     <title>Aplicacion Registro de Asistentes de Congreso</title>
 </head>
-<body>
-    <h1>Congreso de Tecnologías de la Información</h1>
-    <div class="menu">
-        <a href="../htmls/Inicio.html">Inicio</a>
-        <a href="../htmls/Participantes.html">Participantes</a>
-        <a href="../htmls/Conferencias.html">Conferencia</a>
-        <a href="../htmls/Registro.html">Registros</a>
-    </div>
 
+    <body>
+        <h1>Congreso de Tecnologías de la Información</h1>
+        <div class="menu">
+            <a href="../htmls/index.html">Inicio</a>
+            <a href="../htmls/Participantes.html">Participantes</a>
+            <a href="../htmls/Registro.html">Registros</a>
+            <a href="../htmls/Conferencias.html">Conferencia</a>
+            
+        </div>
+        <div class="user-container" id="userContainer">
+            <button onclick="window.location.href='../htmls/Registro.html'" class="button">Agregar</button>
     
-</body>
+            <!-- Aquí se cargarán las tarjetas de usuario -->
+        </div>
+    
+        <script>
+            // Supongamos que tienes un array de usuarios con sus datos
+            const users = [
+                { nombre: 'Usuario 1', Carrera: 'Desarrollador', twitter: 'twitter1' , imagen: 'usuario1.png'},
+                { nombre: 'Usuario 2', Carrera: 'Developer'    , twitter: 'twitter2'     , imagen: 'usuario1.png' },
+                // Agrega más usuarios según sea necesario
+            ];
+    
+            // Función para crear tarjetas de usuario y agregarlas al contenedor
+            function renderUserCards() {
+                const userContainer = document.getElementById('userContainer');
+    
+                users.forEach(user => {
+                    const card = document.createElement('div');
+                    card.classList.add('user-card');
+    
+                    const image = document.createElement('img');
+                    image.src = user.imagen;
+                    image.alt = 'Imagen de usuario';
+                    image.classList.add('user-image');
+    
+                    const userInfo = document.createElement('div');
+                    userInfo.classList.add('user-info');
+                    userInfo.innerHTML = `
+                        <h3>${user.nombre}</h3>
+                        
+                        <a class="twitter-link" href="https://twitter.com/${user.twitter}" target="_blank">${user.twitter}</a>
+                        <p>${user.Carrera}</p>
+                        <!-- Puedes agregar más información según sea necesario -->
+                    `;
+    
+                    card.appendChild(image);
+                    card.appendChild(userInfo);
+    
+                    userContainer.appendChild(card);
+                });
+            }
+    
+            // Llama a la función para renderizar las tarjetas al cargar la página
+            window.onload = renderUserCards;
+        </script>
+    </body>
+    
+
 </html>

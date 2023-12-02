@@ -9,13 +9,16 @@
 <body>
     <h1>Congreso de Tecnologías de la Información</h1>
     <div class="menu">
-        <a href="../htmls/Inicio.html">Inicio</a>
+        <a href="../htmls/index.html">Inicio</a>
         <a href="../htmls/Participantes.html">Participantes</a>
-        <a href="../htmls/Conferencias.html">Conferencia</a>
         <a href="../htmls/Registro.html">Registros</a>
+        <a href="../htmls/Conferencias.html">Conferencia</a>
     </div>
 
+    <div class="formReg">
     <form id="registroForm">
+        <h2>Registro Participante</h2>
+        <br>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
 
@@ -31,22 +34,30 @@
         <label>Imagen de perfil:</label>
         <div class="image-options">
             <div class="image-option">
-                <input type="radio" id="opcion1" name="imagen" value="opcion1.jpg">
                 <label for="opcion1"><img src="usuario1.png" alt="Opción 1"></label>
+                <input type="radio" id="opcion1" name="imagen" value="opcion1.jpg">
+                <p>Autor 1</p>
             </div>
 
             <div class="image-option">
-                <input type="radio" id="opcion2" name="imagen" value="opcion2.jpg">
                 <label for="opcion2"><img src="usuario1.png" alt="Opción 2"></label>
+                <input type="radio" id="opcion2" name="imagen" value="opcion2.jpg">
+                <p>Autor 2</p>
             </div>
 
             <div class="image-option">
-                <input type="radio" id="opcion3" name="imagen" value="opcion3.jpg">
                 <label for="opcion3"><img src="usuario1.png" alt="Opción 3"></label>
+                <input type="radio" id="opcion3" name="imagen" value="opcion3.jpg">
+                <a>Autor 3</a>
             </div>
         </div>
+        <label for="terminos">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            He leído y acepto los términos y condiciones
+        </label>
 
         <button type="submit">Registrar</button>
     </form>
+    </div>
 </body>
 </html>
