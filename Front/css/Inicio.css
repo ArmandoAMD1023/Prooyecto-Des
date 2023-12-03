@@ -149,13 +149,13 @@ form {
     margin: 20px auto;
 }
 
-#registroForm {
+#registroForm , #editarParticipanteForm{
     background-color: white; /* Fondo blanco */
     border-radius: 4px;
     padding: 20px; /* Añadir relleno para un mejor espacio interno */
 }
 
-#registroForm label {
+#registroForm,  #editarParticipanteForm label {
     display: block;
     color: black;
     margin-bottom: 8px; /* Espacio entre etiquetas y campos de entrada */
@@ -176,7 +176,8 @@ form {
     flex: 1; /* Distribuir espacio de manera uniforme entre las opciones de imagen */
 }
 
-#registroForm button {
+#registroForm button,
+#editarParticipanteForm button{
     background-color: #0c23ef; /* Color de fondo del botón (puedes cambiarlo según tus preferencias) */
     color: white;
     border: none;

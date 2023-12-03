@@ -42,6 +42,8 @@
         users.forEach(user => {
             const card = document.createElement('div');
             card.classList.add('user-card');
+            card.addEventListener('click', () => editarParticipante(user.id)); // Agrega el evento de clic
+
 
             const image = document.createElement('img');
             image.src = `usuario${user.avatar}.png`; // Asegúrate de proporcionar la URL correcta
@@ -63,6 +65,13 @@
             userContainer.appendChild(card);
         });
     }
+
+    //Editar llamada
+    function editarParticipante(participantId) {
+    window.location.href = `../htmls/EditarParticipante.html?id=${participantId}`;
+    
+     }
+
 
     // Llama a la función para renderizar las tarjetas al cargar la página
     window.onload = renderUserCards;

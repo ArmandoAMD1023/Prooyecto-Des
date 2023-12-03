@@ -26,14 +26,8 @@
                 <th>Registro de asistencia</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Horario 1</td>
-                <td>Conferencia 1</td>
-                <td>Conferencista 1</td>
-                <td><a href="#" onclick="mostrarModal('Conferencia 1')">Registrar</a></td>
-            </tr>
-            <!-- Agrega más filas según sea necesario -->
+        <tbody id="conferenciaContainer">
+            <!-- Las conferencias se cargarán aquí dinámicamente -->
         </tbody>
     </table>
 
@@ -65,9 +59,49 @@
             </form>
         </div>
     </div>
-
-    <!-- Agrega el siguiente bloque de script al final del body -->
     <script>
+        // Función para cargar dinámicamente las conferencias
+        async function cargarConferencias() {
+            try {
+                const response = await fetch('http://localhost:5034/api/conferencias');
+                const conferencias = await response.json();
+
+                const conferenciaContainer = document.getElementById('conferenciaContainer');
+
+                conferencias.forEach(conferencia => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${conferencia.horario}</td>
+                        <td>${conferencia.tituloConferencia}</td>
+                        <td>${conferencia.conferencista}</td>
+                        <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}')">Registrar</a></td>
+                    `;
+
+                    conferenciaContainer.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error al obtener datos de conferencias:', error);
+            }
+        }
+
+        // Función para mostrar el modal de registro
+        function mostrarModal(conferencia) {
+            document.getElementById('conferenciaSeleccionada').innerText = conferencia;
+            document.getElementById('modalRegistro').style.display = 'flex';
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal() {
+            document.getElementById('modalRegistro').style.display = 'none';
+        }
+
+        // ... Puedes agregar más funciones según sea necesario ...
+
+        // Llama a la función para cargar las conferencias al cargar la página
+        window.onload = cargarConferencias;
+    </script>
+    <!-- Agrega el siguiente bloque de script al final del body -->
+   <!-- <script>
         function mostrarModal(conferencia) {
             document.getElementById('conferenciaSeleccionada').innerText = conferencia;
             document.getElementById('modalRegistro').style.display = 'flex';
@@ -103,8 +137,8 @@
         
     }
         
-
-    </script>
+-->
+    
 </body>
 </html>
 
