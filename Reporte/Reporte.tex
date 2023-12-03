@@ -8,9 +8,9 @@
 \usepackage{graphicx}
 \usepackage[explicit]{titlesec}
 \usepackage{hyperref}
-
-
-
+\usepackage{float}
+\usepackage[backend=biber,style=apa]{biblatex}
+\bibliography{Bibliografía}
 
 \setmainfont{Arial}
 \geometry{
@@ -52,8 +52,13 @@
 	\fontsize{12pt}{2em}\selectfont
 	
 	\tableofcontents
+	\input{Introducción}
 	\input{Desarrollo de la Arquitectura de la Información}
 	\input{Requerimientos del Proyecto}
 	\input{Desarrollo de Diagramas UML}
 	\input{DiagramasBD}
+	\input{Conclusiones}
+	
+	\nocite{*}
+	\printbibliography
 \end{document}

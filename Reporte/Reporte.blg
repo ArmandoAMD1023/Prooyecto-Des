@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Reporte.blg'
+[99] biber-MSWIN64:340> INFO - === 
+[135] Biber.pm:419> INFO - Reading 'Reporte.bcf'
+[262] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[282] Biber.pm:4419> INFO - Processing section 0
+[294] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliografía.bib' for section 0
+[338] bibtex.pm:1713> INFO - LaTeX decoding ...
+[346] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografía.bib'
+[384] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[384] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[384] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[393] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[393] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[393] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[399] bbl.pm:660> INFO - Writing 'Reporte.bbl' with encoding 'UTF-8'
+[401] bbl.pm:763> INFO - Output to Reporte.bbl
