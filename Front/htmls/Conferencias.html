@@ -145,7 +145,7 @@
                     asistentesContainer.appendChild(card);
                 }
                 // Mostrar el modal de asistentes
-                document.getElementById('modalAsistentes').style.display = 'block';
+                document.getElementById('modalAsistentes').style.display = 'flex';
             } catch (error) {
                 console.error('Error al obtener asistentes:', error);
             }
@@ -204,9 +204,9 @@ cargarParticipantes();
 
                 if (response.ok) {
                     console.log('Registro de asistencia guardado exitosamente.');
-                    alert('Registro de asistencia guardado exitosamente.');
+                    alert('Registro de asistencia/inasistencia guardado exitosamente.');
                     cerrarModal();
-                   // mostrarAsistentes(tituloConferencia, idConferencia);
+                    mostrarAsistentes(tituloConferencia, idConferencia);
                     // Puedes realizar otras acciones después de guardar el registro
                 } else {
                     console.error('Error al guardar el registro de asistencia:', response.statusText);
