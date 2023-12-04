@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10.12) (format=lualatex 2023.10.15)  3 DEC 2023 19:54
+This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10.12) (format=lualatex 2023.10.15)  4 DEC 2023 17:49
  restricted system commands enabled.
 **Reporte.tex
 (./Reporte.tex
@@ -429,12 +429,52 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen163
 )
+(C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip53
+\cftbeforetoctitleskip=\skip54
+\cftaftertoctitleskip=\skip55
+\cftbeforepartskip=\skip56
+\cftpartnumwidth=\skip57
+\cftpartindent=\skip58
+\cftbeforechapskip=\skip59
+\cftchapindent=\skip60
+\cftchapnumwidth=\skip61
+\cftbeforesecskip=\skip62
+\cftsecindent=\skip63
+\cftsecnumwidth=\skip64
+\cftbeforesubsecskip=\skip65
+\cftsubsecindent=\skip66
+\cftsubsecnumwidth=\skip67
+\cftbeforesubsubsecskip=\skip68
+\cftsubsubsecindent=\skip69
+\cftsubsubsecnumwidth=\skip70
+\cftbeforeparaskip=\skip71
+\cftparaindent=\skip72
+\cftparanumwidth=\skip73
+\cftbeforesubparaskip=\skip74
+\cftsubparaindent=\skip75
+\cftsubparanumwidth=\skip76
+\cftbeforeloftitleskip=\skip77
+\cftafterloftitleskip=\skip78
+\cftbeforefigskip=\skip79
+\cftfigindent=\skip80
+\cftfignumwidth=\skip81
+\c@lofdepth=\count288
+\c@lotdepth=\count289
+\cftbeforelottitleskip=\skip82
+\cftafterlottitleskip=\skip83
+\cftbeforetabskip=\skip84
+\cfttabindent=\skip85
+\cfttabnumwidth=\skip86
+)
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count288
+\lrq@indent=\count290
 
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -442,63 +482,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count289
-\c@listtotal=\count290
-\c@listcount=\count291
-\c@liststart=\count292
-\c@liststop=\count293
-\c@citecount=\count294
-\c@citetotal=\count295
-\c@multicitecount=\count296
-\c@multicitetotal=\count297
-\c@instcount=\count298
-\c@maxnames=\count299
-\c@minnames=\count300
-\c@maxitems=\count301
-\c@minitems=\count302
-\c@citecounter=\count303
-\c@maxcitecounter=\count304
-\c@savedcitecounter=\count305
-\c@uniquelist=\count306
-\c@uniquename=\count307
-\c@refsection=\count308
-\c@refsegment=\count309
-\c@maxextratitle=\count310
-\c@maxextratitleyear=\count311
-\c@maxextraname=\count312
-\c@maxextradate=\count313
-\c@maxextraalpha=\count314
-\c@abbrvpenalty=\count315
-\c@highnamepenalty=\count316
-\c@lownamepenalty=\count317
-\c@maxparens=\count318
-\c@parenlevel=\count319
-\blx@tempcnta=\count320
-\blx@tempcntb=\count321
-\blx@tempcntc=\count322
-\c@blx@maxsection=\count323
-\blx@maxsegment@0=\count324
-\blx@notetype=\count325
-\blx@parenlevel@text=\count326
-\blx@parenlevel@foot=\count327
-\blx@sectionciteorder@0=\count328
-\blx@sectionciteorderinternal@0=\count329
-\blx@entrysetcounter=\count330
-\blx@biblioinstance=\count331
-\labelnumberwidth=\skip53
-\labelalphawidth=\skip54
-\biblabelsep=\skip55
-\bibitemsep=\skip56
-\bibnamesep=\skip57
-\bibinitsep=\skip58
-\bibparsep=\skip59
-\bibhang=\skip60
+\c@tabx@nest=\count291
+\c@listtotal=\count292
+\c@listcount=\count293
+\c@liststart=\count294
+\c@liststop=\count295
+\c@citecount=\count296
+\c@citetotal=\count297
+\c@multicitecount=\count298
+\c@multicitetotal=\count299
+\c@instcount=\count300
+\c@maxnames=\count301
+\c@minnames=\count302
+\c@maxitems=\count303
+\c@minitems=\count304
+\c@citecounter=\count305
+\c@maxcitecounter=\count306
+\c@savedcitecounter=\count307
+\c@uniquelist=\count308
+\c@uniquename=\count309
+\c@refsection=\count310
+\c@refsegment=\count311
+\c@maxextratitle=\count312
+\c@maxextratitleyear=\count313
+\c@maxextraname=\count314
+\c@maxextradate=\count315
+\c@maxextraalpha=\count316
+\c@abbrvpenalty=\count317
+\c@highnamepenalty=\count318
+\c@lownamepenalty=\count319
+\c@maxparens=\count320
+\c@parenlevel=\count321
+\blx@tempcnta=\count322
+\blx@tempcntb=\count323
+\blx@tempcntc=\count324
+\c@blx@maxsection=\count325
+\blx@maxsegment@0=\count326
+\blx@notetype=\count327
+\blx@parenlevel@text=\count328
+\blx@parenlevel@foot=\count329
+\blx@sectionciteorder@0=\count330
+\blx@sectionciteorderinternal@0=\count331
+\blx@entrysetcounter=\count332
+\blx@biblioinstance=\count333
+\labelnumberwidth=\skip87
+\labelalphawidth=\skip88
+\biblabelsep=\skip89
+\bibitemsep=\skip90
+\bibnamesep=\skip91
+\bibinitsep=\skip92
+\bibparsep=\skip93
+\bibhang=\skip94
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language80
-\c@mincomprange=\count332
-\c@maxcomprange=\count333
-\c@mincompwidth=\count334
+\c@mincomprange=\count334
+\c@maxcomprange=\count335
+\c@mincompwidth=\count336
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -513,98 +553,98 @@ File: apa.dbx 2023/03/20 v9.17 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count335
-\c@savedafterword=\count336
-\c@annotator=\count337
-\c@savedannotator=\count338
-\c@author=\count339
-\c@savedauthor=\count340
-\c@bookauthor=\count341
-\c@savedbookauthor=\count342
-\c@commentator=\count343
-\c@savedcommentator=\count344
-\c@editor=\count345
-\c@savededitor=\count346
-\c@editora=\count347
-\c@savededitora=\count348
-\c@editorb=\count349
-\c@savededitorb=\count350
-\c@editorc=\count351
-\c@savededitorc=\count352
-\c@foreword=\count353
-\c@savedforeword=\count354
-\c@holder=\count355
-\c@savedholder=\count356
-\c@introduction=\count357
-\c@savedintroduction=\count358
-\c@namea=\count359
-\c@savednamea=\count360
-\c@nameb=\count361
-\c@savednameb=\count362
-\c@namec=\count363
-\c@savednamec=\count364
-\c@translator=\count365
-\c@savedtranslator=\count366
-\c@shortauthor=\count367
-\c@savedshortauthor=\count368
-\c@shorteditor=\count369
-\c@savedshorteditor=\count370
-\c@narrator=\count371
-\c@savednarrator=\count372
-\c@execproducer=\count373
-\c@savedexecproducer=\count374
-\c@execdirector=\count375
-\c@savedexecdirector=\count376
-\c@with=\count377
-\c@savedwith=\count378
-\c@labelname=\count379
-\c@savedlabelname=\count380
-\c@institution=\count381
-\c@savedinstitution=\count382
-\c@lista=\count383
-\c@savedlista=\count384
-\c@listb=\count385
-\c@savedlistb=\count386
-\c@listc=\count387
-\c@savedlistc=\count388
-\c@listd=\count389
-\c@savedlistd=\count390
-\c@liste=\count391
-\c@savedliste=\count392
-\c@listf=\count393
-\c@savedlistf=\count394
-\c@location=\count395
-\c@savedlocation=\count396
-\c@organization=\count397
-\c@savedorganization=\count398
-\c@origlocation=\count399
-\c@savedoriglocation=\count400
-\c@origpublisher=\count401
-\c@savedorigpublisher=\count402
-\c@publisher=\count403
-\c@savedpublisher=\count404
-\c@language=\count405
-\c@savedlanguage=\count406
-\c@origlanguage=\count407
-\c@savedoriglanguage=\count408
-\c@citation=\count409
-\c@savedcitation=\count410
-\c@pageref=\count411
-\c@savedpageref=\count412
-\shorthandwidth=\skip61
-\shortjournalwidth=\skip62
-\shortserieswidth=\skip63
-\shorttitlewidth=\skip64
-\shortauthorwidth=\skip65
-\shorteditorwidth=\skip66
-\locallabelnumberwidth=\skip67
-\locallabelalphawidth=\skip68
-\localshorthandwidth=\skip69
-\localshortjournalwidth=\skip70
-\localshortserieswidth=\skip71
-\localshorttitlewidth=\skip72
-\localshortauthorwidth=\skip73
-\localshorteditorwidth=\skip74
+\c@afterword=\count337
+\c@savedafterword=\count338
+\c@annotator=\count339
+\c@savedannotator=\count340
+\c@author=\count341
+\c@savedauthor=\count342
+\c@bookauthor=\count343
+\c@savedbookauthor=\count344
+\c@commentator=\count345
+\c@savedcommentator=\count346
+\c@editor=\count347
+\c@savededitor=\count348
+\c@editora=\count349
+\c@savededitora=\count350
+\c@editorb=\count351
+\c@savededitorb=\count352
+\c@editorc=\count353
+\c@savededitorc=\count354
+\c@foreword=\count355
+\c@savedforeword=\count356
+\c@holder=\count357
+\c@savedholder=\count358
+\c@introduction=\count359
+\c@savedintroduction=\count360
+\c@namea=\count361
+\c@savednamea=\count362
+\c@nameb=\count363
+\c@savednameb=\count364
+\c@namec=\count365
+\c@savednamec=\count366
+\c@translator=\count367
+\c@savedtranslator=\count368
+\c@shortauthor=\count369
+\c@savedshortauthor=\count370
+\c@shorteditor=\count371
+\c@savedshorteditor=\count372
+\c@narrator=\count373
+\c@savednarrator=\count374
+\c@execproducer=\count375
+\c@savedexecproducer=\count376
+\c@execdirector=\count377
+\c@savedexecdirector=\count378
+\c@with=\count379
+\c@savedwith=\count380
+\c@labelname=\count381
+\c@savedlabelname=\count382
+\c@institution=\count383
+\c@savedinstitution=\count384
+\c@lista=\count385
+\c@savedlista=\count386
+\c@listb=\count387
+\c@savedlistb=\count388
+\c@listc=\count389
+\c@savedlistc=\count390
+\c@listd=\count391
+\c@savedlistd=\count392
+\c@liste=\count393
+\c@savedliste=\count394
+\c@listf=\count395
+\c@savedlistf=\count396
+\c@location=\count397
+\c@savedlocation=\count398
+\c@organization=\count399
+\c@savedorganization=\count400
+\c@origlocation=\count401
+\c@savedoriglocation=\count402
+\c@origpublisher=\count403
+\c@savedorigpublisher=\count404
+\c@publisher=\count405
+\c@savedpublisher=\count406
+\c@language=\count407
+\c@savedlanguage=\count408
+\c@origlanguage=\count409
+\c@savedoriglanguage=\count410
+\c@citation=\count411
+\c@savedcitation=\count412
+\c@pageref=\count413
+\c@savedpageref=\count414
+\shorthandwidth=\skip95
+\shortjournalwidth=\skip96
+\shortserieswidth=\skip97
+\shorttitlewidth=\skip98
+\shortauthorwidth=\skip99
+\shorteditorwidth=\skip100
+\locallabelnumberwidth=\skip101
+\locallabelalphawidth=\skip102
+\localshorthandwidth=\skip103
+\localshortjournalwidth=\skip104
+\localshortserieswidth=\skip105
+\localshorttitlewidth=\skip106
+\localshortauthorwidth=\skip107
+\localshorteditorwidth=\skip108
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -620,19 +660,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count413
-\c@textcitetotal=\count414
-\c@textcitemaxnames=\count415
-\c@biburlbigbreakpenalty=\count416
-\c@biburlbreakpenalty=\count417
-\c@biburlnumpenalty=\count418
-\c@biburlucpenalty=\count419
-\c@biburllcpenalty=\count420
+\c@textcitecount=\count415
+\c@textcitetotal=\count416
+\c@textcitemaxnames=\count417
+\c@biburlbigbreakpenalty=\count418
+\c@biburlbreakpenalty=\count419
+\c@biburlnumpenalty=\count420
+\c@biburlucpenalty=\count421
+\c@biburllcpenalty=\count422
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count421
+\c@smartand=\count423
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
@@ -644,8 +684,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count422
-\c@bbx:relatedtotal=\count423
+\c@bbx:relatedcount=\count424
+\c@bbx:relatedtotal=\count425
 )
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
 ed, overwriting.
@@ -734,8 +774,8 @@ mcp;"
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count424
-\@quotereset=\count425
+\@quotelevel=\count426
+\@quotereset=\count427
 (./Reporte.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
@@ -864,16 +904,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 47.
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count426
+\scratchcounter=\count428
 \scratchdimen=\dimen164
 \scratchbox=\box55
-\nofMPsegments=\count427
-\nofMParguments=\count428
+\nofMPsegments=\count429
+\nofMParguments=\count430
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count429
+\MPscratchCnt=\count431
 \MPscratchDim=\dimen165
-\MPnumerator=\count430
-\makeMPintoPDFobject=\count431
+\MPnumerator=\count432
+\makeMPintoPDFobject=\count433
 \everyMPtoPDFconversion=\toks25
 )
 (C:/Users/Pc/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base
@@ -952,12 +992,12 @@ Package biblatex Info: Reference segment=0 on input line 47.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Imagenes/LogoItl.png, id=67, 116.68594pt x 118.94438pt>
+<Imagenes/LogoItl.png, id=87, 116.68594pt x 118.94438pt>
 File: Imagenes/LogoItl.png Graphic file (type png)
 <use Imagenes/LogoItl.png>
 Package luatex.def Info: Imagenes/LogoItl.png  used on input line 5.
 (luatex.def)             Requested size: 56.14926pt x 57.00008pt.
-<Imagenes/LogoTecnm.png, id=68, 1256.44406pt x 171.64125pt>
+<Imagenes/LogoTecnm.png, id=88, 1256.44406pt x 171.64125pt>
 File: Imagenes/LogoTecnm.png Graphic file (type png)
 <use Imagenes/LogoTecnm.png>
 Package luatex.def Info: Imagenes/LogoTecnm.png  used on input line 7.
@@ -1103,11 +1143,11 @@ LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 5.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <6> on input line 2.
 )
 \tf@toc=\write5
 
@@ -1146,24 +1186,94 @@ Capítulo I.
 [4
 
 ]
-Overfull \hbox (7.09673pt too wide) in paragraph at lines 38--39
+Underfull \hbox (badness 3271) in paragraph at lines 28--29
+[]\TU/Arial(0)/m/n/12 El fron-tend es-ta de-sa-rro-lla-do con ja-vas-cript, html
+ y css, aten-dien-do a los
+ []
+
+
+Overfull \hbox (7.09673pt too wide) in paragraph at lines 33--34
 []\TU/Arial(0)/m/n/12 Se-gún ([]Huet, []2023[]), la ar-qui-tec-tu-ra modelo-vis
 ta-controlador tie-ne co-mo ca-rac-te-rís-ti-ca
  []
 
 [5]
-<Imagenes/Diseño Pantalla Inicio.png, id=138, 1445.4pt x 813.0375pt>
-File: Imagenes/Diseño Pantalla Inicio.png Graphic file (type png)
-<use Imagenes/Diseño Pantalla Inicio.png>
-Package luatex.def Info: Imagenes/Diseño Pantalla Inicio.png  used on input li
-ne 90.
-(luatex.def)             Requested size: 443.57848pt x 249.50821pt.
- [6]) ("./Requerimientos del Proyecto.tex" [7
+Underfull \hbox (badness 2027) in paragraph at lines 83--84
+[]\TU/Arial(0)/m/n/12 El es-ti-lo y co-lo-res que con-si-de-ra-mos más con-ve-n
+ien-tes uti-li-zar, son los de
+ []
+
+[6]
+<Imagenes/web1.png, id=181, 1012.5328pt x 402.75468pt>
+File: Imagenes/web1.png Graphic file (type png)
+<use Imagenes/web1.png>
+Package luatex.def Info: Imagenes/web1.png  used on input line 90.
+(luatex.def)             Requested size: 443.57848pt x 176.44441pt.
+<Imagenes/web2.png, id=182, 1021.56656pt x 460.72125pt>
+File: Imagenes/web2.png Graphic file (type png)
+<use Imagenes/web2.png>
+Package luatex.def Info: Imagenes/web2.png  used on input line 97.
+(luatex.def)             Requested size: 443.57848pt x 200.04655pt.
+<Imagenes/web3.png, id=183, 1008.76875pt x 449.42906pt>
+File: Imagenes/web3.png Graphic file (type png)
+<use Imagenes/web3.png>
+Package luatex.def Info: Imagenes/web3.png  used on input line 104.
+(luatex.def)             Requested size: 443.57848pt x 197.62595pt.
+ [7
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.1
 '
-<./Imagenes/Diseño Pantalla Inicio.png>]
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.2
+'
+<./Imagenes/web1.png><./Imagenes/web2.png>]
+<Imagenes/web4.png, id=190, 1023.825pt x 413.29407pt>
+File: Imagenes/web4.png Graphic file (type png)
+<use Imagenes/web4.png>
+Package luatex.def Info: Imagenes/web4.png  used on input line 111.
+(luatex.def)             Requested size: 443.57848pt x 179.06253pt.
+<Imagenes/web5.png, id=191, 563.10374pt x 441.90094pt>
+File: Imagenes/web5.png Graphic file (type png)
+<use Imagenes/web5.png>
+Package luatex.def Info: Imagenes/web5.png  used on input line 118.
+(luatex.def)             Requested size: 443.57848pt x 348.1067pt.
+ [8
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.3
+'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.4
+'
+<./Imagenes/web3.png><./Imagenes/web4.png>]
+<Imagenes/web6.png, id=198, 1022.31938pt x 431.36156pt>
+File: Imagenes/web6.png Graphic file (type png)
+<use Imagenes/web6.png>
+Package luatex.def Info: Imagenes/web6.png  used on input line 125.
+(luatex.def)             Requested size: 443.57848pt x 187.16026pt.
+<Imagenes/web7.png, id=199, 526.96875pt x 297.36093pt>
+File: Imagenes/web7.png Graphic file (type png)
+<use Imagenes/web7.png>
+Package luatex.def Info: Imagenes/web7.png  used on input line 132.
+(luatex.def)             Requested size: 443.57848pt x 250.31688pt.
+ [9
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.5
+'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.6
+'
+<./Imagenes/web5.png><./Imagenes/web6.png>]
+<Imagenes/web8.png, id=206, 501.37312pt x 433.62pt>
+File: Imagenes/web8.png Graphic file (type png)
+<use Imagenes/web8.png>
+Package luatex.def Info: Imagenes/web8.png  used on input line 139.
+(luatex.def)             Requested size: 443.57848pt x 383.65112pt.
+ [10
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.7
+'
+<./Imagenes/web7.png>]) ("./Requerimientos del Proyecto.tex" [11
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.8
+'
+<./Imagenes/web8.png>]
 Capítulo II.
-\c@cRequerimientos=\count432
+\c@cRequerimientos=\count434
 
 Underfull \hbox (badness 1253) in paragraph at lines 10--11
 \TU/Arial(0)/m/n/12 re-gis-trar un nue-vo par-ti-ci-pan-te, guar-dan-do los si-g
@@ -1176,42 +1286,42 @@ Underfull \hbox (badness 1527) in paragraph at lines 12--13
 de nue-vo al lis-ta-do de
  []
 
-[8
+[12
 
-]) ("./Desarrollo de Diagramas UML.tex" [9]
+]) ("./Desarrollo de Diagramas UML.tex" [13]
 Capítulo III.
-<Imagenes/Diagramas/UML.png, id=156, 635.5243pt x 371.28712pt>
+<Imagenes/Diagramas/UML.png, id=226, 635.5243pt x 371.28712pt>
 File: Imagenes/Diagramas/UML.png Graphic file (type png)
 <use Imagenes/Diagramas/UML.png>
 Package luatex.def Info: Imagenes/Diagramas/UML.png  used on input line 5.
 (luatex.def)             Requested size: 443.57848pt x 259.15704pt.
-<Imagenes/Diagramas/Casos de uso.png, id=157, 354.57469pt x 406.51875pt>
+<Imagenes/Diagramas/Casos de uso.png, id=227, 354.57469pt x 406.51875pt>
 File: Imagenes/Diagramas/Casos de uso.png Graphic file (type png)
 <use Imagenes/Diagramas/Casos de uso.png>
 Package luatex.def Info: Imagenes/Diagramas/Casos de uso.png  used on input lin
 e 12.
 (luatex.def)             Requested size: 399.21791pt x 457.71083pt.
-[10
+[14
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3.1
 '
 <./Imagenes/Diagramas/UML.png>]
-<Imagenes/Diagramas/Secuencia.png, id=164, 879.88725pt x 526.66762pt>
+<Imagenes/Diagramas/Secuencia.png, id=233, 879.88725pt x 526.66762pt>
 File: Imagenes/Diagramas/Secuencia.png Graphic file (type png)
 <use Imagenes/Diagramas/Secuencia.png>
 Package luatex.def Info: Imagenes/Diagramas/Secuencia.png  used on input line 2
 0.
 (luatex.def)             Requested size: 443.57848pt x 265.51099pt.
- [11
+ [15
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3.2
 '
-<./Imagenes/Diagramas/Casos de uso.png>]) (./DiagramasBD.tex [12
+<./Imagenes/Diagramas/Casos de uso.png>]) (./DiagramasBD.tex [16
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3.3
 '
 <./Imagenes/Diagramas/Secuencia.png>]
 Capítulo IV.
-<Imagenes/Diagramas/Diagrama Entidad Relación.png, id=175, 824.07875pt x 392.4
+<Imagenes/Diagramas/Diagrama Entidad Relación.png, id=244, 824.07875pt x 392.4
 6625pt>
 File: Imagenes/Diagramas/Diagrama Entidad Relación.png Graphic file (type png)
 
@@ -1219,13 +1329,13 @@ File: Imagenes/Diagramas/Diagrama Entidad Relación.png Graphic file (type png)
 Package luatex.def Info: Imagenes/Diagramas/Diagrama Entidad Relación.png  use
 d on input line 6.
 (luatex.def)             Requested size: 399.21791pt x 190.12431pt.
-<Imagenes/Diagramas/diagrama bd.png, id=176, 705.38531pt x 476.53032pt>
+<Imagenes/Diagramas/diagrama bd.png, id=245, 705.38531pt x 476.53032pt>
 File: Imagenes/Diagramas/diagrama bd.png Graphic file (type png)
 <use Imagenes/Diagramas/diagrama bd.png>
 Package luatex.def Info: Imagenes/Diagramas/diagrama bd.png  used on input line
  14.
 (luatex.def)             Requested size: 399.21791pt x 269.69823pt.
-) (./Conclusiones.tex [13
+) (./Conclusiones.tex [17
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.1
@@ -1234,9 +1344,11 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.1
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.2
 '
 <./Imagenes/Diagramas/Diagrama Entidad Relación.png><./Imagenes/Diagramas/diagr
-ama bd.png>]) [14
+ama bd.png>] [18
 
-] [15
+]) [19
+
+] [20
 
 ] (./Reporte.aux
 LaTeX Info: Redefining \sptext on input line 23.
@@ -1247,32 +1359,39 @@ LaTeX Info: Redefining \% on input line 23.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
-Package rerunfilecheck Info: File `Reporte.out' has not changed.
-(rerunfilecheck)             Checksum: 48E07F47002B251150E212724AA537C8;3129.
+
+
+Package rerunfilecheck Warning: File `Reporte.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Reporte.out':
+(rerunfilecheck)             Before: 064E48275454536D3D7E8E200712F43D;3777
+(rerunfilecheck)             After:  DD030F4F45AA54A834DDA49767A3020C;4781.
 Package logreq Info: Writing requests to 'Reporte.run.xml'.
 
 \openout1 = Reporte.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 21843 strings out of 476835
+ 22258 strings out of 476835
  125161,1977958 words of node,token memory allocated
- 538 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 12 attribute, 63 glue_spec
+ 708 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 4 glue, 3 kern, 1 glyph, 12 attribute, 97 glue_spec
 , 7 attribute_list, 1 write, 2 pdf_action nodes
-   avail lists: 1:1,2:529,3:210,4:14,5:377,6:49,7:3948,8:179,9:257,10:11,11:578
- 43055 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:931,3:242,4:14,5:387,6:63,7:4213,8:179,9:371,10:11,11:578
+ 43423 multiletter control sequences out of 65536+600000
  106 fonts using 32600207 bytes
- 79i,6n,107p,679b,2805s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,6n,107p,679b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Windows/Fonts/arialni.ttf><C:/Windows/Fonts/arial.ttf><C:/Windows/Fonts/aria
 lbd.ttf><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/opentype/public/montser
 rat/montserrat-extrabold.otf><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/op
 entype/public/montserrat/montserrat-regular.otf><C:/Users/Pc/AppData/Local/Micro
 soft/Windows/Fonts/adobe caslon pro regular.ttf><C:/Users/Pc/AppData/Local/Progr
 ams/MiKTeX/fonts/opentype/public/montserrat/montserrat-bold.otf>
-Output written on Reporte.pdf (16 pages, 727729 bytes).
+Output written on Reporte.pdf (21 pages, 1910377 bytes).
 
-PDF statistics: 253 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 131072)
- 129 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 332 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 131072)
+ 169 words of extra memory for PDF output out of 10000 (max. 100000000)
 
