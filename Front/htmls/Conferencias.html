@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/Inicio.css">
+    <style>
+        h1 {
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 40px;
+            display: flex;
+            margin-top: 35px;
+           
+        }
+
+        img {
+            margin-bottom: 20px; /* Ajusta la distancia hacia abajo según sea necesario */
+             margin-left: 50px;
+            
+           
+        }
+    </style>
 
     <title>Aplicacion Registro de Asistentes de Congreso</title>
 </head>
 <body>
-    <h1>Congreso de Tecnologías de la Información</h1>
+    <h1>Congreso de Tecnologías de la Información
+        <img src="../img/itl_leon.png" alt="Logo" width="150" height="150">
+    </h1>
+   
     <div class="menu">
         <a href="../htmls/index.html">Inicio</a>
         <a href="../htmls/Participantes.html">Participantes</a>
@@ -24,6 +44,7 @@
                 <th>Título de la conferencia</th>
                 <th>Nombre del conferencista</th>
                 <th>Registro de asistencia</th>
+                <th>Asistentes</th>
             </tr>
         </thead>
         <tbody id="conferenciaContainer">
@@ -80,7 +101,7 @@
                         <td>${conferencia.tituloConferencia}</td>
                         <td>${conferencia.conferencista}</td>
                         <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}')">Registrar</a></td>
-                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver Asistentes</a></td>
+                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver</a></td>
                     `;
 
                     conferenciaContainer.appendChild(row);
@@ -193,9 +214,13 @@ cargarParticipantes();
 
                 if (response.ok) {
                     console.log('Registro de asistencia guardado exitosamente.');
+                    alert('Registro de asistencia guardado exitosamente.');
+                    cerrarModal();
+                    location.reload();
                     // Puedes realizar otras acciones después de guardar el registro
                 } else {
                     console.error('Error al guardar el registro de asistencia:', response.statusText);
+                    alert('Error al guardar el registro de asistencia:', response.statusText);
                 }
             } catch (error) {
                 console.error('Error al realizar la solicitud POST:', error);

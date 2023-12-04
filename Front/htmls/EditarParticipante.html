@@ -123,9 +123,14 @@
                 
                                 if (response.ok) {
                                     console.log('Cambios guardados exitosamente.');
+                                    alert('Cambios guardados exitosamente.');
+                                    window.location.href = '../htmls/Participantes.html';  
+                                    
                                     // Puedes redirigir a otra página o realizar otras acciones después de guardar los cambios
                                 } else {
                                     console.error('Error al guardar los cambios:', response.statusText);
+                                    alert('Error al guardar los cambios, checa bien tus datos');
+                                    location.reload();
                                 }
                             } catch (error) {
                                 console.error('Error al realizar la solicitud PUT:', error);
