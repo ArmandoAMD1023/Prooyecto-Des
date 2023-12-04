@@ -62,7 +62,7 @@
     <div id="modalAsistentes" class="modal">
         <div class="modal-content">
             <span class="close" onclick="cerrarModalAsistentes()">&times;</span>
-            <h2 id="conferenciaSeleccionada">Asistentes de la Conferencia</h2>
+            <h2 id="conferenciaSeleccionada2">Asistentes de la Conferencia</h2>
             <ul id="asistentesList">
                 <!-- Los asistentes se cargarán aquí dinámicamente -->
             </ul>
@@ -84,7 +84,7 @@
                         <td>${conferencia.tituloConferencia}</td>
                         <td>${conferencia.conferencista}</td>
                         <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}', ${conferencia.idConferencia})">Registrar</a></td>
-                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver Asistentes</a></td>
+                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.tituloConferencia}', ${conferencia.idConferencia})">Ver Asistentes</a></td>
                     `;
 
                     conferenciaContainer.appendChild(row);
@@ -110,8 +110,10 @@
         console.error('Error al cargar participantes:', error);
     }
 }
-        async function mostrarAsistentes(idConferencia) {
+        async function mostrarAsistentes(tituloConferencia,idConferencia) {
             try {
+                
+                document.getElementById('conferenciaSeleccionada2').innerText = `Asistentes de la Conferencia : ${tituloConferencia}`;
                 const response = await fetch(`http://localhost:5034/api/asistencia/${encodeURIComponent(idConferencia)}`);
                 const asistentes = await response.json();
 
@@ -143,7 +145,6 @@
                     asistentesContainer.appendChild(card);
                 }
                 // Mostrar el modal de asistentes
-                document.getElementById('conferenciaSeleccionada').textContent = `Asistentes de la Conferencia`;
                 document.getElementById('modalAsistentes').style.display = 'block';
             } catch (error) {
                 console.error('Error al obtener asistentes:', error);
@@ -174,6 +175,7 @@ cargarParticipantes();
 
             const modalRegistro = document.getElementById('modalRegistro');
             const idConferencia = modalRegistro.dataset.idConferencia;
+            const tituloConferencia = document.getElementById('conferenciaSeleccionada').innerText;
 
             const confirmacionSi = document.getElementById('confirmacionSi').checked;
             const confirmacionNo = document.getElementById('confirmacionNo').checked;
@@ -202,7 +204,7 @@ cargarParticipantes();
 
                 if (response.ok) {
                     console.log('Registro de asistencia guardado exitosamente.');
-                    mostrarAsistentes(idConferencia);
+                    mostrarAsistentes(tituloConferencia, idConferencia);
                     // Puedes realizar otras acciones después de guardar el registro
                 } else {
                     console.error('Error al guardar el registro de asistencia:', response.statusText);
