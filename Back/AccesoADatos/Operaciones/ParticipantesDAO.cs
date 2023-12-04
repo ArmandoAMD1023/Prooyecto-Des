@@ -75,7 +75,7 @@ namespace AccesoADatos.Operaciones
         }
 
         // Método para actualizar un participante existente, modificando solo ciertos campos
-        public bool Actualizar(int id, string nombre, string apellidos, string email, string usuarioTwitter, string avatar)
+        public bool Actualizar(int id, string nombre, string apellidos, string email, string usuarioTwitter, string avatar, string ocupacion)
         {
             try
             {
@@ -90,6 +90,7 @@ namespace AccesoADatos.Operaciones
                 participante.Email = email ?? participante.Email;
                 participante.UsuarioTwitter = usuarioTwitter ?? participante.UsuarioTwitter;
                 participante.Avatar = avatar ?? participante.Avatar;
+                participante.Ocupacion = ocupacion ?? participante.Ocupacion;
 
                 contexto.SaveChanges();
                 return true;
