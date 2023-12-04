@@ -100,8 +100,8 @@
                         <td>${conferencia.horario}</td>
                         <td>${conferencia.tituloConferencia}</td>
                         <td>${conferencia.conferencista}</td>
-                        <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}')">Registrar</a></td>
-                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver</a></td>
+                        <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}', ${conferencia.idConferencia})">Registrar</a></td>
+                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver Asistentes</a></td>
                     `;
 
                     conferenciaContainer.appendChild(row);
@@ -136,31 +136,31 @@
                 asistentesList.innerHTML = '';
 
                 for (const asistente of asistentes) {
-            const card = document.createElement('div');
-            card.classList.add('user-card'); // Ajusta la clase según tu estilo CSS
+                    const card = document.createElement('div');
+                    card.classList.add('user-card'); // Ajusta la clase según tu estilo CSS
 
-            const participanteResponse = await fetch(`http://localhost:5034/api/participante/${asistente.idParticipante}`);
-            const participante = await participanteResponse.json();
+                    const participanteResponse = await fetch(`http://localhost:5034/api/participante/${asistente.idParticipante}`);
+                    const participante = await participanteResponse.json();
 
-            const image = document.createElement('img');
-            image.src = `usuario${participante.avatar}.png`; // Ajusta la ruta según tu estructura de imágenes
-            image.alt = 'Imagen de usuario';
-            image.classList.add('user-image'); // Ajusta la clase según tu estilo CSS
+                    const image = document.createElement('img');
+                    image.src = `usuario${participante.avatar}.png`; // Ajusta la ruta según tu estructura de imágenes
+                    image.alt = 'Imagen de usuario';
+                    image.classList.add('user-image'); // Ajusta la clase según tu estilo CSS
 
-            const userInfo = document.createElement('div');
-            userInfo.classList.add('user-info'); // Ajusta la clase según tu estilo CSS
-            userInfo.innerHTML = `
-                <h3>${participante.nombre} ${participante.apellidos}</h3>
-                <p>${participante.ocupacion}</p>
-                <!-- Agrega más información según sea necesario -->
-            `;
+                    const userInfo = document.createElement('div');
+                    userInfo.classList.add('user-info'); // Ajusta la clase según tu estilo CSS
+                    userInfo.innerHTML = `
+                        <h3>${participante.nombre} ${participante.apellidos}</h3>
+                        <p>${participante.ocupacion}</p>
+                        <!-- Agrega más información según sea necesario -->
+                    `;
 
-            card.appendChild(image);
-            card.appendChild(userInfo);
-            asistentesContainer.appendChild(card);
-        }
+                    card.appendChild(image);
+                    card.appendChild(userInfo);
+                    asistentesContainer.appendChild(card);
+                }
                 // Mostrar el modal de asistentes
-                document.getElementById('conferenciaSeleccionada').textContent = `Asistentes de la Conferencia: ${idConferencia}`;
+                document.getElementById('conferenciaSeleccionada').textContent = `Asistentes de la Conferencia`;
                 document.getElementById('modalAsistentes').style.display = 'block';
             } catch (error) {
                 console.error('Error al obtener asistentes:', error);
@@ -173,7 +173,9 @@
 cargarParticipantes();
 
         // Función para mostrar el modal de registro
-        function mostrarModal(conferencia) {
+        function mostrarModal(conferencia, idConferencia) {
+            const modalRegistro = document.getElementById('modalRegistro');
+            modalRegistro.dataset.idConferencia = idConferencia;
             document.getElementById('conferenciaSeleccionada').innerText = conferencia;
             document.getElementById('modalRegistro').style.display = 'flex';
         }
@@ -187,6 +189,9 @@ cargarParticipantes();
             const participanteSelect = document.getElementById('participantes');
             const idParticipante = participanteSelect.value;
 
+            const modalRegistro = document.getElementById('modalRegistro');
+            const idConferencia = modalRegistro.dataset.idConferencia;
+
             const confirmacionSi = document.getElementById('confirmacionSi').checked;
             const confirmacionNo = document.getElementById('confirmacionNo').checked;
             const confirmacionAsistencia = confirmacionSi || confirmacionNo;
@@ -199,7 +204,7 @@ cargarParticipantes();
 
             const data = {
                 idParticipante: parseInt(idParticipante), // Asegúrate de convertirlo a un número si es necesario
-                idConferencia: 1, // Ajusta el ID de la conferencia según sea necesario
+                idConferencia: idConferencia, // Ajusta el ID de la conferencia según sea necesario
                 confirmacionAsistencia: confirmacionSi,
             };
 
@@ -214,9 +219,7 @@ cargarParticipantes();
 
                 if (response.ok) {
                     console.log('Registro de asistencia guardado exitosamente.');
-                    alert('Registro de asistencia guardado exitosamente.');
-                    cerrarModal();
-                    location.reload();
+                    mostrarAsistentes(idConferencia);
                     // Puedes realizar otras acciones después de guardar el registro
                 } else {
                     console.error('Error al guardar el registro de asistencia:', response.statusText);
@@ -231,45 +234,6 @@ cargarParticipantes();
         // Llama a la función para cargar las conferencias al cargar la página
         window.onload = cargarConferencias;
     </script>
-    <!-- Agrega el siguiente bloque de script al final del body -->
-   <!-- <script>
-        function mostrarModal(conferencia) {
-            document.getElementById('conferenciaSeleccionada').innerText = conferencia;
-            document.getElementById('modalRegistro').style.display = 'flex';
-        }
-
-        function cerrarModal() {
-            document.getElementById('modalRegistro').style.display = 'none';
-        }
-
-        // ... Código existente ...
-
-    function guardarRegistro() {
-        // ... Código existente ...
-
-        if (confirmacionSi) {
-            // Código para cuando se confirma asistencia (Sí)
-            console.log('Asistencia confirmada (Sí)');
-            alert('Asistencia confirmada (Sí)');
-            // Redirige a la página de listado de participantes
-            window.location.href = '../htmls/ListadoParticipantes.html';
-        } else if (confirmacionNo) {
-            // Código para cuando no se confirma asistencia (No)
-            console.log('Asistencia confirmada (No)');
-            alert('Asistencia confirmada (No)');
-            cerrarModal(); // Cierra el modal después de guardar
-        } else {
-            // Ninguna opción seleccionada
-            alert('Selecciona una opción de confirmación');
-        }
-
-        
-
-        
-    }
-        
--->
-    
 </body>
 </html>
 

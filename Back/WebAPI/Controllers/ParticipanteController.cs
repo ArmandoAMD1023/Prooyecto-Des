@@ -77,7 +77,8 @@ namespace WebApi.Controllers
                     participante.Apellidos,
                     participante.Email,
                     participante.UsuarioTwitter,
-                    participante.Avatar
+                    participante.Avatar,
+                    participante.Ocupacion 
                 );
 
                 if (resultado)
