@@ -36,34 +36,44 @@
 
     // Función para crear tarjetas de usuario y agregarlas al contenedor
     async function renderUserCards() {
-        const userContainer = document.getElementById('userContainer');
-        const users = await obtenerDatosUsuarios();
+    const userContainer = document.getElementById('userContainer');
+    const users = await obtenerDatosUsuarios();
 
-        users.forEach(user => {
-            const card = document.createElement('div');
-            card.classList.add('user-card');
+    users.forEach(user => {
+        const card = document.createElement('div');
+        card.classList.add('user-card');
+        card.addEventListener('click', () => editarParticipante(user)); // Pasar el objeto user completo
 
-            const image = document.createElement('img');
-            image.src = `usuario${user.avatar}.png`; // Asegúrate de proporcionar la URL correcta
-            image.alt = 'Imagen de usuario';
-            image.classList.add('user-image');
+        const image = document.createElement('img');
+        image.src = `usuario${user.avatar}.png`;
+        image.alt = 'Imagen de usuario';
+        image.classList.add('user-image');
 
-            const userInfo = document.createElement('div');
-            userInfo.classList.add('user-info');
-            userInfo.innerHTML = `
-                <h3>${user.nombre} ${user.apellidos}</h3>
-                <a class="twitter-link" href="https://twitter.com/${user.usuarioTwitter}" target="_blank">${user.usuarioTwitter}</a>
-                <p>${user.ocupacion}</p>
-                <!-- Puedes agregar más información según sea necesario -->
-            `;
+        const userInfo = document.createElement('div');
+        userInfo.classList.add('user-info');
+        userInfo.innerHTML = `
+            <h3>${user.nombre} ${user.apellidos}</h3>
+            <a class="twitter-link" href="https://twitter.com/${user.usuarioTwitter}" target="_blank">${user.usuarioTwitter}</a>
+            <p>${user.ocupacion}</p>
+        `;
 
-            card.appendChild(image);
-            card.appendChild(userInfo);
+        card.appendChild(image);
+        card.appendChild(userInfo);
 
-            userContainer.appendChild(card);
-        });
+        userContainer.appendChild(card);
+    });
+}
+
+//Editar llamada
+function editarParticipante(participant) {
+    if (participant) {
+        const queryString = `?id=${participant.idParticipante}&nombre=${encodeURIComponent(participant.nombre)}&apellidos=${encodeURIComponent(participant.apellidos)}&email=${encodeURIComponent(participant.email)}&usuarioTwitter=${encodeURIComponent(participant.usuarioTwitter)}&ocupacion=${encodeURIComponent(participant.ocupacion)}&avatar=${encodeURIComponent(participant.avatar)}`;
+
+        window.location.href = `../htmls/EditarParticipante.html${queryString}`;
+    } else {
+        console.error('Error: El participante es undefined.');
     }
-
+}
     // Llama a la función para renderizar las tarjetas al cargar la página
     window.onload = renderUserCards;
         </script>

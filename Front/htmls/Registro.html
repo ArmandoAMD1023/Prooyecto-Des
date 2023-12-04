@@ -17,7 +17,7 @@
 
     <div class="formReg">
     <form id="registroForm">
-        <h2>Registro Participante</h2>
+        <h2 id="modalTitle">Registro Participante</h2>
         <br>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
@@ -51,7 +51,7 @@
             <div class="image-option">
                 <label for="opcion3"><img src="usuario3.png" alt="Opción 3"></label>
                 <input type="radio" id="opcion3" name="imagen" value="3">
-                <a>Autor 3</a>
+                <p>Autor 3</p>
             </div>
         </div>
         <label for="terminos">
@@ -98,6 +98,8 @@
         .then(data => {
             // Maneja la respuesta del servidor si es necesario
             console.log('Respuesta del servidor:', data);
+            alert("Cliente Añadido con exito");
+            location.reload();
         })
         .catch(error => {
             console.error('Error al realizar la solicitud POST:', error);

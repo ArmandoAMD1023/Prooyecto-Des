@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/Inicio.css">
+    <title>Aplicacion Registro de Asistentes de Congreso</title>
+</head>
+
+    <body>
+        <h1>Congreso de Tecnologías de la Información</h1>
+        <div class="menu">
+            <a href="../htmls/index.html">Inicio</a>
+            <a href="../htmls/Participantes.html">Participantes</a>
+            <a href="../htmls/Registro.html">Registros</a>
+            <a href="../htmls/Conferencias.html">Conferencia</a>
+            
+        </div>
+        <form id="editarForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="twitter">Twitter:</label>
+            <input type="text" id="twitter" name="twitter">
+    
+            <label for="ocupacion">Ocupación:</label>
+            <input type="text" id="ocupacion" name="ocupacion" required>
+    
+            <label>Imagen de perfil:</label>
+        <div class="image-options">
+            <div class="image-option">
+                <label for="opcion1"><img src="usuario1.png" alt="Opción 1"></label>
+                <input type="radio" id="opcion1" name="imagen" value="1">
+                <p>Autor 1</p>
+            </div>
+
+            <div class="image-option">
+                <label for="opcion2"><img src="usuario2.png" alt="Opción 2"></label>
+                <input type="radio" id="opcion2" name="imagen" value="2">
+                <p>Autor 2</p>
+            </div>
+
+            <div class="image-option">
+                <label for="opcion3"><img src="usuario3.png" alt="Opción 3"></label>
+                <input type="radio" id="opcion3" name="imagen" value="3">
+                <p>Autor 3</p>
+            </div>
+        </div>
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    
+        <script>
+            // Función para obtener el id del participante de la URL
+            function obtenerIdParticipante() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get('id');
+            }
+    
+            // Función para cargar detalles del participante para edición
+            function cargarDetallesParticipante() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const idParticipante = urlParams.get('id');
+
+                // Llena el formulario con los detalles del participante
+                document.getElementById('nombre').value = urlParams.get('nombre');
+                document.getElementById('apellido').value = urlParams.get('apellidos');
+                document.getElementById('email').value = urlParams.get('email');
+                document.getElementById('twitter').value = urlParams.get('usuarioTwitter');
+                document.getElementById('ocupacion').value = urlParams.get('ocupacion');
+                avatar = urlParams.get('avatar');
+                console.log(urlParams.get('avatar'));
+                if(avatar == "1"){
+                    document.getElementById('opcion1').checked = true;
+                }else if(avatar == "2"){
+                    document.getElementById('opcion2').checked = true;
+                }else{
+                    document.getElementById('opcion3').checked = true;
+                }
+            }
+            // Función para manejar el envío del formulario
+            async function guardarCambios(event) {
+                event.preventDefault();
+    
+                const idParticipante = obtenerIdParticipante();
+                const nombre = document.getElementById('nombre').value;
+                const apellidos = document.getElementById('apellido').value;
+                const email = document.getElementById('email').value;
+                const usuarioTwitter = document.getElementById('twitter').value;
+                const ocupacion = document.getElementById('ocupacion').value;
+                const avatar = obtenerValorSeleccionado('imagen');
+                            
+                    const aceptoTerminos = true;
+                
+                            // Construye el objeto con los datos del formulario
+                            const datos = {
+                                idParticipante,
+                                nombre,
+                        apellidos,
+                        email,
+                        usuarioTwitter,
+                        avatar,
+                        ocupacion,
+                        aceptoTerminos,
+                        asistencia: []
+                                // Añade otros campos según sea necesario
+                            };
+                
+                            // Realiza la solicitud PUT para actualizar los datos
+                            try {
+                                const response = await fetch(`http://localhost:5034/api/participante/${idParticipante}`, {
+                                    method: 'PUT',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(datos)
+                                });
+                
+                                if (response.ok) {
+                                    console.log('Cambios guardados exitosamente.');
+                                    // Puedes redirigir a otra página o realizar otras acciones después de guardar los cambios
+                                } else {
+                                    console.error('Error al guardar los cambios:', response.statusText);
+                                }
+                            } catch (error) {
+                                console.error('Error al realizar la solicitud PUT:', error);
+                            }
+                        }
+                
+            window.onload = () => {
+                cargarDetallesParticipante();
+                document.getElementById('editarForm').addEventListener('submit', guardarCambios);
+            };
+            function obtenerValorSeleccionado(nombre) {
+        const opciones = document.getElementsByName(nombre);
+        const opcionSeleccionada = Array.from(opciones).find(opcion => opcion.checked);
+        return opcionSeleccionada ? opcionSeleccionada.value : null;
+    }
+        </script>
+    </body>
+</html>

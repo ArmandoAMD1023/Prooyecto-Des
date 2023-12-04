@@ -26,14 +26,8 @@
                 <th>Registro de asistencia</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Horario 1</td>
-                <td>Conferencia 1</td>
-                <td>Conferencista 1</td>
-                <td><a href="#" onclick="mostrarModal('Conferencia 1')">Registrar</a></td>
-            </tr>
-            <!-- Agrega más filas según sea necesario -->
+        <tbody id="conferenciaContainer">
+            <!-- Las conferencias se cargarán aquí dinámicamente -->
         </tbody>
     </table>
 
@@ -45,10 +39,6 @@
             <form>
                 <label for="participantes">Participantes:</label>
                 <select id="participantes" name="participantes">
-                    <!-- Aquí deberías cargar dinámicamente la lista de participantes -->
-                    <option value="participante1">Participante 1</option>
-                    <option value="participante2">Participante 2</option>
-                    <!-- Agrega más opciones según sea necesario -->
                 </select>
 
                 <label>
@@ -65,9 +55,159 @@
             </form>
         </div>
     </div>
-
-    <!-- Agrega el siguiente bloque de script al final del body -->
+    <div id="modalAsistentes" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalAsistentes()">&times;</span>
+            <h2 id="conferenciaSeleccionada">Asistentes de la Conferencia</h2>
+            <ul id="asistentesList">
+                <!-- Los asistentes se cargarán aquí dinámicamente -->
+            </ul>
+        </div>
+    </div>
     <script>
+        // Función para cargar dinámicamente las conferencias
+        async function cargarConferencias() {
+            try {
+                const response = await fetch('http://localhost:5034/api/conferencias');
+                const conferencias = await response.json();
+
+                const conferenciaContainer = document.getElementById('conferenciaContainer');
+
+                conferencias.forEach(conferencia => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${conferencia.horario}</td>
+                        <td>${conferencia.tituloConferencia}</td>
+                        <td>${conferencia.conferencista}</td>
+                        <td><a href="#" onclick="mostrarModal('${conferencia.tituloConferencia}')">Registrar</a></td>
+                        <td><a href="#" onclick="mostrarAsistentes('${conferencia.idConferencia}')">Ver Asistentes</a></td>
+                    `;
+
+                    conferenciaContainer.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error al obtener datos de conferencias:', error);
+            }
+        }
+        async function cargarParticipantes() {
+    try {
+        const response = await fetch('http://localhost:5034/api/participantes');
+        const participantes = await response.json();
+
+        const participantesSelect = document.getElementById('participantes');
+
+        participantes.forEach(participante => {
+            const option = document.createElement('option');
+            option.value = participante.idParticipante; // Ajusta según la estructura de tu participante
+            option.textContent = `${participante.nombre} ${participante.apellidos}`; // Ajusta según la estructura de tu participante
+            participantesSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error('Error al cargar participantes:', error);
+    }
+}
+        async function mostrarAsistentes(idConferencia) {
+            try {
+                const response = await fetch(`http://localhost:5034/api/asistencia/${encodeURIComponent(idConferencia)}`);
+                const asistentes = await response.json();
+
+                const asistentesContainer = document.getElementById('asistentesList');
+                asistentesList.innerHTML = '';
+
+                for (const asistente of asistentes) {
+            const card = document.createElement('div');
+            card.classList.add('user-card'); // Ajusta la clase según tu estilo CSS
+
+            const participanteResponse = await fetch(`http://localhost:5034/api/participante/${asistente.idParticipante}`);
+            const participante = await participanteResponse.json();
+
+            const image = document.createElement('img');
+            image.src = `usuario${participante.avatar}.png`; // Ajusta la ruta según tu estructura de imágenes
+            image.alt = 'Imagen de usuario';
+            image.classList.add('user-image'); // Ajusta la clase según tu estilo CSS
+
+            const userInfo = document.createElement('div');
+            userInfo.classList.add('user-info'); // Ajusta la clase según tu estilo CSS
+            userInfo.innerHTML = `
+                <h3>${participante.nombre} ${participante.apellidos}</h3>
+                <p>${participante.ocupacion}</p>
+                <!-- Agrega más información según sea necesario -->
+            `;
+
+            card.appendChild(image);
+            card.appendChild(userInfo);
+            asistentesContainer.appendChild(card);
+        }
+                // Mostrar el modal de asistentes
+                document.getElementById('conferenciaSeleccionada').textContent = `Asistentes de la Conferencia: ${idConferencia}`;
+                document.getElementById('modalAsistentes').style.display = 'block';
+            } catch (error) {
+                console.error('Error al obtener asistentes:', error);
+            }
+        }
+        function cerrarModalAsistentes() {
+            document.getElementById('modalAsistentes').style.display = 'none';
+        }
+// Llama a la función al cargar la página o cuando sea necesario
+cargarParticipantes();
+
+        // Función para mostrar el modal de registro
+        function mostrarModal(conferencia) {
+            document.getElementById('conferenciaSeleccionada').innerText = conferencia;
+            document.getElementById('modalRegistro').style.display = 'flex';
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal() {
+            document.getElementById('modalRegistro').style.display = 'none';
+        }
+
+        async function guardarRegistro() {
+            const participanteSelect = document.getElementById('participantes');
+            const idParticipante = participanteSelect.value;
+
+            const confirmacionSi = document.getElementById('confirmacionSi').checked;
+            const confirmacionNo = document.getElementById('confirmacionNo').checked;
+            const confirmacionAsistencia = confirmacionSi || confirmacionNo;
+
+            // Verificar si se ha seleccionado al menos una confirmación
+            if (!confirmacionAsistencia) {
+                alert('Debes confirmar la asistencia (Sí o No).');
+                return;
+            }
+
+            const data = {
+                idParticipante: parseInt(idParticipante), // Asegúrate de convertirlo a un número si es necesario
+                idConferencia: 1, // Ajusta el ID de la conferencia según sea necesario
+                confirmacionAsistencia: confirmacionSi,
+            };
+
+            try {
+                const response = await fetch('http://localhost:5034/api/asistencia', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    console.log('Registro de asistencia guardado exitosamente.');
+                    // Puedes realizar otras acciones después de guardar el registro
+                } else {
+                    console.error('Error al guardar el registro de asistencia:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error al realizar la solicitud POST:', error);
+            }
+        }
+        // ... Puedes agregar más funciones según sea necesario ...
+
+        // Llama a la función para cargar las conferencias al cargar la página
+        window.onload = cargarConferencias;
+    </script>
+    <!-- Agrega el siguiente bloque de script al final del body -->
+   <!-- <script>
         function mostrarModal(conferencia) {
             document.getElementById('conferenciaSeleccionada').innerText = conferencia;
             document.getElementById('modalRegistro').style.display = 'flex';
@@ -103,8 +243,8 @@
         
     }
         
-
-    </script>
+-->
+    
 </body>
 </html>
 

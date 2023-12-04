@@ -20,6 +20,16 @@ namespace AccesoADatos.Operaciones
         {
             return contexto.Participantes.ToList();
         }
+        public Participante Seleccionar(int id)
+        {
+            var participante = contexto.Participantes.Find(id);
+
+            if (participante == null)
+            {
+                return null; // Devuelve un código 404 si no se encuentra el asistente
+            }
+            return participante;
+        }
 
         public List<Participante> ObtenerInformacionBasicaParticipantes()
         {
