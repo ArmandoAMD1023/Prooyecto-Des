@@ -1,14 +1,15 @@
 %!TEX program = lualatex
-\documentclass[spanish,10pt,letterpaper]{report}
+\documentclass[spanish]{report}
 \usepackage[T1]{fontenc}
-\usepackage{babel}
-
+\usepackage[spanish, es-lcroman]{babel}
 \usepackage{geometry}
 \usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage[explicit]{titlesec}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{titletoc}
+%\usepackage[titles]{tocloft}
 \usepackage[backend=biber,style=apa]{biblatex}
 \bibliography{Bibliografía}
 
@@ -38,13 +39,9 @@
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 
-%\addto\captionsspanish{\renewcommand{\contentsname}{ÍNDICE
-%		\addcontentsline{toc}{chapter}{ÍNDICE}}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 
 \titlespacing*{\chapter}{0mm}{0mm}{10mm}
-
-
-
 
 
 \begin{document}
@@ -52,6 +49,9 @@
 	\fontsize{12pt}{2em}\selectfont
 	
 	\tableofcontents
+	\addcontentsline{toc}{chapter}{ÍNDICE GENERAL}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{ÍNDICE DE FIGURAS}
 	\input{Introducción}
 	\input{Desarrollo de la Arquitectura de la Información}
 	\input{Requerimientos del Proyecto}

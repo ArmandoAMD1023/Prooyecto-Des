@@ -19,10 +19,23 @@ La presente aplicación va dirigida al personal docente del ITL.
 
 \section{Definición de Contenidos del Proyecto}
 
+El proyecto contiene las siguientes partes:
+
+\begin{list}{--}{}
+	\item Portada
+	\item Índice
+	\item Introducción
+	\item Desarrollo de la arquitectura de la aplicación: objetivos, audiencia, arquitectura, sistemas de navegación, diseño visual.
+	\item Requerimientos del proyecto: Requerimientos funcionales y requerimientos no funcionales.
+	\item Desarrollo de diagramas UML: Diagrama de clases, diagrama de casos de uso,diagramas de secuencia.
+	\item Sistema BD relacional: Diagrama E-R, diagrama relacional.
+\end{list}
+
+ 
 
 \section{Definición de la Arquitectura del Proyecto}
 
-En este proyecto se utilizó la arquitectura modelo-vista-controlador ya que una de sus características es dividir la aplicación en tres partes interactivas entre sí.
+Según (\cite{huet-2023}), la arquitectura modelo-vista-controlador tiene como característica dividir la aplicación en tres partes interactivas entre sí.
 
 \textit{Modelo}: Abarca la funcionalidad y los datos.
 
@@ -30,37 +43,52 @@ En este proyecto se utilizó la arquitectura modelo-vista-controlador ya que una
 
 \textit{Controlador}: Administra la entrada del usuario.
 
-Este tipo de arquitectura es muy utilizada para el desarrollo de aplicaciones web y también nos pareció la más adecuada para nuestro proyecto.
+Este tipo de arquitectura es muy empleada para el desarrollo de aplicaciones web y también nos pareció la más adecuada para utilizar en nuestro proyecto.
 
 
 
 \section{Definición de los Sistemas de Navegación}
 
-La razón para diseñar correctamente un sistema de navegación (SN) radica en prevenir que los usuarios puedan hallarse perdidos frente a nuestro web y experimenten sensaciones de confusión.
-
-Los sistemas de navegación son una pieza de vital importancia para la experiencia del usuario de nuestro sitio web. Su aparente sencillez es lo que hace que a menudo olvidemos su importancia y descuidemos su elaboración.
+De acuerdo con (\cite{joven-2011}), La razón para diseñar correctamente un sistema de navegación (SN), radica en prevenir que los usuarios puedan hallarse perdidos frente a nuestro web y experimenten sensaciones de confusión.
 
 Características de un buen Sistema de Navegación
-Todo buen sistema de navegación debe satisfacer al menos los siguientes objetivos:
 
-– Establecer un modo de ir de un sitio a otro dentro de la web. La navegación debe ser clara, concisa, consistente y facilmente identificable dentro de la página. No se puede olvidar que también debe ser transparente: nadie debe ser consciente de que hay un sistema de navegación o de que está usándolo.
+Todo buen sistema de navegación debe satisfacer al menos los siguientes requisitos:
 
-– Comunicar al usuario la relación entre el contenido que está visualizando y la navegación del sitio. Debemos permitir que el usuario sepa en todo momento dónde se encuentra, hacia donde puede ir desde este punto y que partes del sitio ha visitado ya.
-
-– Reflejar la arquitectura del sitio que subyace al sistema de navegación. Debemos diferenciar la navegación global, la navegación local o subsecciones y la navegación contextual.
-
-– Permitir volver a la página de inicio rapidamente. En un sitio web la página de inicio sirve como punto de partida y como lugar al que volver cuando nos encontramos perdidos, por eso debe ser sencillo ir a este punto desde cualquier parte del sitio.
-
-– Debe tener un corsé para el crecimiento del site, lo cual significa tener muy claro desde el principio las posibilidades de agrandamiento de ese site y crear un sistema de navegación que permita cubrir esas posibilidades sin desvirtuarse.
+\begin{itemize}
+	\item Establecer un modo de ir de un sitio a otro dentro de la web.
+	
+	La navegación debe ser clara, concisa, consistente y fácilmente identificable dentro de la página. 
+	
+	\item Comunicar al usuario la relación entre el contenido que está visualizando y la navegación del sitio.
+	
+	Debemos permitir que el usuario sepa en todo momento dónde se encuentra y hacia donde puede ir desde este punto.
+	
+	\item Reflejar la arquitectura del sitio que subyace al sistema de navegación.
+	
+	\item Permitir volver a la página de inicio rápidamente.
+\end{itemize}
 
 Elementos de los Sistemas de Navegación
+
 Barras de Menús
-Los menús son la parte más importante de los Sistemas de Navegación. Gracias a ellos, es que el usuario puede navegar libremente por la página, ir a cualquier otra página interna, y recorrer el site sin temor a que su ruta desaparezca. Un menú siempre debe permanecer constante, y lo más recomendable es que no cambie su ubicación ni su diseño en la página (color, tamaño, tipo de letra, etc..)
 
-Hay dos tipos de barras de menús, los menús horizontales y los verticales. Ambos, en mi perspectiva, son igualmente usados en los diseños web. Los dos permiten desarrollarse en menus desplegables (aunque es más recomendable utilizar los menús horizontales para ello), y los dos tambien, permiten desarrollarse en botones de rollover.
+Los menús son una parte muy importante de los Sistemas de Navegación. Gracias a ellos, es que el usuario puede navegar libremente por la página, ir a cualquier otra página interna, y recorrer el sitio sin temor a que su ruta desaparezca.
 
-Si se desea lograr un buen diseño, es recomendable que la fuente que se utilize sea clara y grande, con un color que contraste con el fondo, para permitir una buena lectura. También es recomendable utilizar [WWW]Sistemas de Etiquetado en el menú, es decir, utilizar íconos en vez de palabras, para que la página adquiera identidad, y sea más fácil para el usuario reconocer puntos estratégicos del site.
+Un menú siempre debe permanecer constante, y lo más recomendable es que no cambie su ubicación ni su diseño en la página (color, tamaño, tipo de letra, etc..)
 
-Otro punto importante es indicarle al usuario en que parte del menú está. Eso se logra con un cambio en el color del texto, o con una señal (si es una imagen) que indique que el usuario se encuentre en esa página (un blur distinto a la imagen, una flecha, un cambio en el ícono, etc…)
+Hay dos tipos de barras de menús, los menús horizontales y los verticales. Ambos son muy usados en los diseños web. 
+
+Si se desea lograr un buen diseño, es recomendable que la fuente que se utilice sea clara y grande, con un color que contraste con el fondo, para permitir una buena lectura. 
+
+También es recomendable utilizar [WWW]Sistemas de Etiquetado en el menú, es decir, utilizar íconos en vez de palabras, para que la página adquiera identidad, y sea más fácil para el usuario reconocer puntos estratégicos del sitio.
+
+
 \section{Definición del Diseño Visual del proyecto}
-%GUIs
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{Imagenes/Diseño Pantalla Inicio}
+	\caption{Imagen de la Pantalla de Inicio}
+	\label{fig:diseno-pantalla-inicio}
+\end{figure}
+
