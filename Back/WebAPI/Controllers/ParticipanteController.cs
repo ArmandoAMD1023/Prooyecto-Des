@@ -53,6 +53,18 @@ namespace WebApi.Controllers
                 return StatusCode(500, ex.Message); // 500 Internal Server Error
             }
         }
+        [HttpGet("participante/{id}")]
+        public ActionResult<Participante> Seleccionar(int id)
+        {
+            var participante = conferenciasDAO.Seleccionar(id);
+
+            if (participante == null)
+            {
+                return NotFound(); // Devuelve un código 404 si no se encuentra el asistente
+            }
+
+            return Ok(participante);
+        }
 
         [HttpPut("participante/{id}")]
         public ActionResult<bool> ActualizarParticipante(int id, [FromBody] Participante participante)
