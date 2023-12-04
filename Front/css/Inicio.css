@@ -39,6 +39,10 @@ img {
 h1 {
     color: white;
     font-family: 'Palatino', sans-serif; /* Cambia 'Roboto' a la fuente que desees usar */
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 40px;
+    
 }
 .menu {
     display: flex;
@@ -254,6 +258,7 @@ td a:hover {
     width: 100%;
 }
 
+
 .close {
     position: absolute;
     top: 10px;
@@ -261,4 +266,5 @@ td a:hover {
     font-size: 20px;
     cursor: pointer;
 }
+
 
