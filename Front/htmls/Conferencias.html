@@ -204,7 +204,9 @@ cargarParticipantes();
 
                 if (response.ok) {
                     console.log('Registro de asistencia guardado exitosamente.');
-                    mostrarAsistentes(tituloConferencia, idConferencia);
+                    alert('Registro de asistencia guardado exitosamente.');
+                    cerrarModal();
+                   // mostrarAsistentes(tituloConferencia, idConferencia);
                     // Puedes realizar otras acciones después de guardar el registro
                 } else {
                     console.error('Error al guardar el registro de asistencia:', response.statusText);
