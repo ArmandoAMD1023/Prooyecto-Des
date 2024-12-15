@@ -26,3 +26,17 @@ C:\Users\osval\Desktop\GitProyect\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7
 C:\Users\osval\Desktop\GitProyect\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.pdb
 C:\Users\osval\Desktop\GitProyect\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.genruntimeconfig.cache
 C:\Users\osval\Desktop\GitProyect\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\ref\AccesoADatos.dll
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.csproj.AssemblyReference.cache
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.AssemblyInfoInputs.cache
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.AssemblyInfo.cs
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.dll
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\refint\AccesoADatos.dll
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.pdb
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\bin\Debug\net7.0\AccesoADatos.deps.json
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\bin\Debug\net7.0\AccesoADatos.runtimeconfig.json
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\bin\Debug\net7.0\AccesoADatos.dll
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\bin\Debug\net7.0\AccesoADatos.pdb
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\AccesoADatos.genruntimeconfig.cache
+C:\Users\mejia\Documents\Fabrizio Moreno Mejia ITL\EmpresarialISmael\Prooyecto-Des\Back\AccesoADatos\obj\Debug\net7.0\ref\AccesoADatos.dll

@@ -34,7 +34,8 @@ namespace AccesoADatos.Operaciones
         // Método para seleccionar una asistencia en específico por id
         public List<Asistencium> Seleccionar(int id)
         {
-            return contexto.Asistencia.Where(a => a.IdConferencia == id).ToList();
+           // return contexto.Asistencia.Where(a => a.IdConferencia == id).ToList();
+            return contexto.Asistencia.Where(a => a.IdConferencia == id && a.ConfirmacionAsistencia).ToList();
         }
 
         // Método para insertar una nueva asistencia

@@ -3095,23 +3095,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\osval\\.nuget\\packages\\": {},
+    "C:\\Users\\mejia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mejia\\Documents\\Fabrizio Moreno Mejia ITL\\EmpresarialISmael\\Prooyecto-Des\\Back\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\osval\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\mejia\\Documents\\Fabrizio Moreno Mejia ITL\\EmpresarialISmael\\Prooyecto-Des\\Back\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\mejia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mejia\\Documents\\Fabrizio Moreno Mejia ITL\\EmpresarialISmael\\Prooyecto-Des\\Back\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\osval\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mejia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3126,8 +3126,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\AccesoADatos\\AccesoADatos.csproj": {
-              "projectPath": "C:\\Users\\osval\\Desktop\\GitProyect\\Prooyecto-Des\\Back\\AccesoADatos\\AccesoADatos.csproj"
+            "C:\\Users\\mejia\\Documents\\Fabrizio Moreno Mejia ITL\\EmpresarialISmael\\Prooyecto-Des\\Back\\AccesoADatos\\AccesoADatos.csproj": {
+              "projectPath": "C:\\Users\\mejia\\Documents\\Fabrizio Moreno Mejia ITL\\EmpresarialISmael\\Prooyecto-Des\\Back\\AccesoADatos\\AccesoADatos.csproj"
             }
           }
         }
@@ -3170,7 +3170,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

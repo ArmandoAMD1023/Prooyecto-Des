@@ -24,7 +24,7 @@ public partial class ConferenciasContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-LN1HKSS;Database=Conferencias;Trust Server Certificate=true;User Id=sa;Password=hola;MultipleActiveResultSets=true");
+        => optionsBuilder.UseSqlServer("Server=MEJIA\\FABZSQL;Database=Conferencias;Trust Server Certificate=true;User Id=sa;Password=admin;MultipleActiveResultSets=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
